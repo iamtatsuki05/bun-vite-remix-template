@@ -30,4 +30,4 @@ jobs:
         shell: bash
         run: docker compose up -d --build
       - name: Test
-        run: docker compose exec frontend bash -c "npm install && npm run lint && npm run test:run"
+        run: docker compose exec frontend bash -c "bun install && bun run lint && bun run typecheck"
